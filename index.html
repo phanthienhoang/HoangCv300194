@@ -1,256 +1,82 @@
-<!DOCTYPE html>
-<html lang="en"> 
+<!DOCTYPE html >
+<html lang="en">
 <head>
-    <title>Developers</title>
-    
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive Resume Template">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
-    <link rel="shortcut icon" href="favicon.ico"> 
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-    
-    <!-- FontAwesome JS-->
-    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
-       
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/pillar-2.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Hiệu ứng 3D</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+  <script type="text/javascript" charset="utf-8">
 
+    function hasClassName(inElement, inClassName)
+    {
+        var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)');
+        return regExp.test(inElement.className);
+    }
 
-</head> 
+    function addClassName(inElement, inClassName)
+    {
+        if (!hasClassName(inElement, inClassName))
+            inElement.className = [inElement.className, inClassName].join(' ');
+    }
 
-<body>	
+    function removeClassName(inElement, inClassName)
+    {
+        if (hasClassName(inElement, inClassName)) {
+            var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
+            var curClasses = inElement.className;
+            inElement.className = curClasses.replace(regExp, ' ');
+        }
+    }
 
-    <article class="resume-wrapper text-center position-relative">
-	    <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
-		    <header class="resume-header pt-4 pt-md-0">
-			    <div class="media flex-column flex-md-row">
-				    <img class="mr-3 img-fluid picture mx-auto" style="width:179px;height:220px" src="assets/images/hoangphan.jpg" alt="" >
-				    <div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
-					    <div class="primary-info">
-						    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Phan Thiên Hoàng</h1>
-						    <div class="title mb-3">Full Stack Developer</div>
-						    <ul class="list-unstyled">
-							    <li class="mb-2"><a href="#"><i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>phanthienhoang95@gmail.com</a></li>
-							    <li><a href="#"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>0708033319</a></li>
-						    </ul>
-					    </div><!--//primary-info-->
-					    <div class="secondary-info ml-md-auto mt-2">
-						    <ul class="resume-social list-unstyled">
-                                <li class="mb-3"><a href="#"><span class="fa-container text-center mr-2"><i class="fab fa-github-alt fa-fw"></i></span>github.com/phanthienhoang</a></li>
-				                <li class="mb-3"><a href="#"><span class="fa-container text-center mr-2"><i class="fab fa-facebook"></i></span>www.facebook.com/euro.hoang.94</a></li>
-				                <li class="mb-3"><a href="#"><span class="fa-container text-center mr-2"><i class="fas fa-user-friends"></i></span>Mr.Phuc Le (educate)</a></li>
-				                <li class="mb-3"><a href="#"><span class="fa-container text-center mr-2"><i class="fas fa-phone"></i></span>0983339720</a></li>
-						    </ul>
-					    </div><!--//secondary-info-->
-					    
-				    </div><!--//media-body-->
-			    </div><!--//media-->
-		    </header>
-		    <div class="resume-body p-5">
-			    <div class="row">
-				    <div class="col-lg-9">
-					    <section class="resume-section experience-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work Experience</h2>
-						    <div class="resume-section-content">
-							    <div class="resume-timeline position-relative">
-								    <article class="resume-timeline-item position-relative pb-5">
-									    
-									    <div class="resume-timeline-item-header mb-2">
-										    <div class="d-flex flex-column flex-md-row">
-										        <h3 class="resume-position-title font-weight-bold mb-1">Project</h3>
-										    </div><!--//row-->
-										    <div class="resume-position-time">2019 - Present</div>
-									    </div><!--//resume-timeline-item-header-->
-									    <div class="resume-timeline-item-desc">
-										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Website of thua thien hue tour:</h4>
-										    <p>Includes features:</p>
-										    <ul>
-											    <li>CRUD: creat, read, update, delete </li>
-												<li>See tour booking details</li>
-												<li>booking tour</li>
-											    <li>Send contact via email</li>
-											    <li>Reply on  Online message</li>
-										    </ul>
-										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-										    <ul class="list-inline">
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">PHP</span></li>
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">LARAVEL</span></li>
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">jQuery</span></li>
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">HTML/CSS</span></li>
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">JAVASCRIPT</span></li>
-											</ul>
-											<p><a href="https://github.com/phanthienhoang/Module_Laravel/tree/master/demothem">Link github</a></p>
-                                        </div><!--//resume-timeline-item-desc-->
-								    </article><!--//resume-timeline-item-->
-								    
-								    <article class="resume-timeline-item position-relative pb-5">
-									    
-									    <div class="resume-timeline-item-header mb-2">
-										    <div class="d-flex flex-column flex-md-row">
-										        <h3 class="resume-position-title font-weight-bold mb-1">ONLINE EXAM SYSTEM</h3>
-										    </div><!--//row-->
-										    <div class="resume-position-time">2019</div>
-									    </div><!--//resume-timeline-item-header-->
-									    <div class="resume-timeline-item-desc">
-											<p>Position: full stack developer </p>
-											<p>Aim:Create an environment to practice or test online for Codegym Hue Company</p>
-											<p>Includes features:</p>
-										    <ul>
-											    <li>CRUD: creat, read, update, delete </li>
-												<li>Take an online test:PHP/JAVA/REACT</li>
-												<li>User registration</li>
-											    <li>Examine</li>
-											</ul>
-											<p>Operating under scrum method for 1 month</p>
-										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-										    <ul class="list-inline">
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">REACT</span></li>
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">LARAVEL</span></li>
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">HTML</span></li>
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">JAVASCRIPT</span></li>
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">HTML/CSS</span></li>
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">MySQL</span></li>
-										    </ul>
-									    </div><!--//resume-timeline-item-desc-->
+    function toggleClassName(inElement, inClassName)
+    {
+        if (hasClassName(inElement, inClassName))
+            removeClassName(inElement, inClassName);
+        else
+            addClassName(inElement, inClassName);
+    }
 
-								    </article><!--//resume-timeline-item-->
-								    
-								    <article class="resume-timeline-item position-relative pb-5">
-									    
-									    <div class="resume-timeline-item-header mb-2">
-										    <div class="d-flex flex-column flex-md-row">
-										        <h3 class="resume-position-title font-weight-bold mb-1">Games:Block puzzle classic and feed the Snake
-													</h3>
-										        <div class="resume-company-name ml-auto"></div>
-										    </div><!--//row-->
-										    <div class="resume-position-time">2019</div>
-									    </div><!--//resume-timeline-item-header-->
-									    <div class="resume-timeline-item-desc">
-										    <p>This is some basic games in Codegym’s training program</p>
-											<p><a href="https://github.com/phanthienhoang/BP-CodeGym/tree/master/case%20study">Link github</a></p>
-									    </div><!--//resume-timeline-item-desc-->
-								    </article><!--//resume-timeline-item-->			    				    								    
-							    </div><!--//resume-timeline-->							    							   
-						    </div>
-					    </section><!--//experience-section-->
-				    </div>
-				    <div class="col-lg-3">
-					    <section class="resume-section skills-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills &amp; Tools</h2>
-						    <div class="resume-section-content">
-						        <div class="resume-skill-item">
-							        <h4 class="resume-skills-cat font-weight-bold">Frontend</h4>
-							        <ul class="list-unstyled mb-4">
-								        <li class="mb-2">
-								            <div class="resume-skill-name">React</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">JavaScript</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 56%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">CSS</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 52%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">HTML</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-							        </ul>
-						        </div><!--//resume-skill-item-->
-						        
-						        <div class="resume-skill-item">
-						            <h4 class="resume-skills-cat font-weight-bold">Backend</h4>
-							        <ul class="list-unstyled">
-								        <li class="mb-2">
-								            <div class="resume-skill-name">PHP</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">Laravel</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 61%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-							        </ul>
-						        </div><!--//resume-skill-item-->
-						    </div><!--resume-section-content-->
-					    </section><!--//skills-section-->
-					    <section class="resume-section education-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
-						    <div class="resume-section-content">
-							    <ul class="list-unstyled">
-								    <li class="mb-2">
-								        <div class="resume-degree font-weight-bold">Code Gym </div>
-								        <div class="resume-degree-time">2019</div>
-								    </li>
-								    <!-- <li>
-								        <div class="resume-degree font-weight-bold">Khoa Hoc</div>
-								        <div class="resume-degree-org">Imperial College London</div>
-								        <div class="resume-degree-time">2007 - 2010</div>
-								    </li> -->
-							    </ul>
-						    </div>
-						</section><!--//education-section-->
-						<section class="resume-section language-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Certificates</h2>
-						    <div class="resume-section-content">
-							    <ul class="list-unstyled resume-lang-list">
-								    <li class="mb-2"><span class="resume-lang-name font-weight-bold">scrum esemce certificate</span> <small class="text-muted font-weight-normal"></small></li>
-								</ul>
-								<ul class="list-unstyled resume-lang-list">
-								    <li class="mb-2"><span class="resume-lang-name font-weight-bold">Kanban certificate</span> <small class="text-muted font-weight-normal"></small></li>
-							    </ul>
-						    </div>
-					    </section><!--//language-section-->
-					    <section class="resume-section language-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Language</h2>
-						    <div class="resume-section-content">
-							    <ul class="list-unstyled resume-lang-list">
-								    <li class="mb-2"><span class="resume-lang-name font-weight-bold">English</span> <small class="text-muted font-weight-normal">(Medium)</small></li>
-							    </ul>
-						    </div>
-					    </section><!--//language-section-->
-					    <section class="resume-section interests-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Interests</h2>
-						    <div class="resume-section-content">
-							    <ul class="list-unstyled">
-								    <li class="mb-1">football </li>
-								    <li class="mb-1">badminton</li>
-								    <li class="mb-1">cooking</li>
-							    </ul>
-						    </div>
-					    </section><!--//interests-section-->
-					    
-				    </div>
-			    </div><!--//row-->
-		    </div><!--//resume-body-->
-		    
-		    
-	    </div>
-    </article>  
+    function toggleShape()
+    {
+      var shape = document.getElementById('shape');
+      if (hasClassName(shape, 'ring')) {
+        removeClassName(shape, 'ring');
+        addClassName(shape, 'cube');
+      } else {
+        removeClassName(shape, 'cube');
+        addClassName(shape, 'ring');
+      }
+      
+      var stage = document.getElementById('stage');
+      if (hasClassName(shape, 'ring'))
+        stage.style.webkitTransform = 'translateZ(-300px)';
+      else
+        stage.style.webkitTransform = '';
+    }
+  </script>
+</head>
+<body>
+  <div class="controls">
+    <div style="text-align: center;"><button onclick="toggleShape()">Chuyển hiệu ứng</button></div>
+  </div>
 
-    
-    <footer class="footer text-center pt-2 pb-5">
-    </footer>
-
-    
+  <div id="container">
+    <div id="stage">
+      <div id="shape" class="cube backfaces">
+        <div class="plane one"></div>
+        <div class="plane two"></div>
+        <div class="plane three"></div>
+        <div class="plane four"></div>
+        <div class="plane five"></div>
+        <div class="plane six"></div>
+        <div class="plane seven"></div>
+        <div class="plane eight"></div>
+        <div class="plane nine"></div>
+        <div class="plane ten"></div>
+        <div class="plane eleven"></div>
+        <div class="plane twelve"></div>
+      </div>
+    </div>
+  </div>
 
 </body>
-</html> 
+</html>
