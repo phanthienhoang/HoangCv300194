@@ -24,7 +24,7 @@ body {
     
     #shape {
       position: relative;
-      top: 215px;
+      top: 350px;
       margin: 0 auto;
       height: 200px;
       width: 200px;
@@ -268,8 +268,10 @@ body {
     .controls {
       width: 80%;
       margin: 0 auto;
-      padding: 5px 20px;
+      padding: 5px 20px ;
+
     }
     .controls > div {
       margin: 10px;
+    
     }
